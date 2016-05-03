@@ -48,4 +48,4 @@ EUR: 0004003000009802 v24576
 ♥ Reboot. Then pray or have A9LH. Check if you see your edits.
 
 
-♥♥♥Many thanks to the GBATemp community, Asia81, and a few more honourable mentions for the programs to do have made this possible.
+♥♥♥ Many thanks to the GBATemp community, Asia81, and a few more honourable mentions for the programs to have made this possible. ♥♥♥
