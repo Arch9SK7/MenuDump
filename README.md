@@ -29,6 +29,7 @@ OR GodMode9 -> (A) on CIA -> CIA image options... -> Decrypt file (...) -> Decry
 
 ◘ Run Part1.bat, it will extract all decrypted files, then it will extract them.
 
+
 (If you do not get all of the extracted folders, then edit both .bat files Part 1 & Part 2 To match the
 
 ♥ SystemApp.0000.00000087(82/84) (the last digits are based on region 82 (might be wrong the error system app will show right number (Jp?) 87 (US?) 84 (EU?) that first extracted so that it will match your specific region.)
