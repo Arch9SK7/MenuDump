@@ -2,7 +2,7 @@
 
 
 
-WARNING: This will affect your HomeMenu, it's a critical core of the 3DS. Be sure to have a HardMod/NTRBoot, or A9LH/Boot9Strap NAND backup ready to recover a BRICK (I used it once, I got a brick the second time I did it. A9LH saved me (TO AVOID BRICKING PLEASE KEEP YOUR BACK UP FROM JUST BEFORE THE EDIT AND IF YOU WANT TO RE INJECT AN EDITED HOME MENU THEN YOU MUST RESTORE THAT NAND THEN YOU CAN EDIT AGAIN OR ELSE YOU BRICK INSTANTLY)) . Or your can do it on your EmuNand, but be sure to also backup your EmuNand before.
+WARNING: This will affect your HomeMenu, it's a critical core of the 3DS. Be sure to have a HardMod/NTRBoot, or A9LH/Boot9Strap NAND backup ready to recover a **BRICK** (I used it once, I got a brick the second time I did it. A9LH saved me **(TO AVOID BRICKING PLEASE KEEP YOUR BACK UP FROM JUST BEFORE THE EDIT AND IF YOU WANT TO RE INJECT AN EDITED HOME MENU THEN YOU MUST RESTORE THAT NAND THEN YOU CAN EDIT AGAIN OR ELSE YOU BRICK INSTANTLY))** . Or your can do it on your EmuNand, but be sure to also backup your EmuNand before.
 
 ◘ Download:My master zip folder which comes with everything you need.
 
