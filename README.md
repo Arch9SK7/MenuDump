@@ -23,9 +23,6 @@ This will affect your HomeMenu, it's a critical core of the 3DS. Be sure to have
 
 ◘ Now you do your edits.
 
-◘ For Sleep.LZ which is located in the root folder of romFS just rename it to sleep_LZ.bin.bin (including the extention)
-this will let you open this with TheCyberQuakes Sleepeditor to add a bit of colour after words just rename the file back to sleep.LZ
-
 ◘ Text is generally located in romfs/message/ & romfs/message_HUD so edit there as well if you wish and to do this you just need to drag one of these files onto the MSBT editor in the folder provided.
 
 ◘ When all your edits are done just finish up with my Home Menu tool (either the full process or just finish the steps like compressing LZ and rebuild cia
