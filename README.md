@@ -1,6 +1,7 @@
-WARNING: This will affect your HomeMenu, it's a critical core of the 3DS. Be sure to have a HardMod/NTRBoot, or A9LH/Boot9Strap NAND backup ready to recover a **BRICK** (I used it once, I got a brick the second time I did it. A9LH saved me **(TO AVOID BRICKING PLEASE KEEP YOUR BACK UP FROM JUST BEFORE THE EDIT AND IF YOU WANT TO RE INJECT AN EDITED HOME MENU THEN YOU MUST RESTORE THAT NAND THEN YOU CAN EDIT AGAIN OR ELSE YOU BRICK INSTANTLY))** . Or your can do it on your EmuNand, but be sure to also backup your EmuNand before.
+# WARNING: 
+This will affect your HomeMenu, it's a critical core of the 3DS. Be sure to have a HardMod/NTRBoot, or A9LH/Boot9Strap NAND backup ready to recover a **BRICK** (I used it once, I got a brick the second time I did it. A9LH saved me **(TO AVOID BRICKING PLEASE KEEP YOUR BACK UP FROM JUST BEFORE THE EDIT AND IF YOU WANT TO RE INJECT AN EDITED HOME MENU THEN YOU MUST RESTORE THAT NAND THEN YOU CAN EDIT AGAIN OR ELSE YOU BRICK INSTANTLY))** . Or your can do it on your EmuNand, but be sure to also backup your EmuNand before.
 
-◘ Download:My master zip folder which comes with everything you need.
+◘ Download: My master zip folder which comes with everything you need.
 
 ◘ Make sure you have the latest GodMode9 Installed https://github.com/d0k3/GodMode9/releases
 
@@ -25,7 +26,7 @@ WARNING: This will affect your HomeMenu, it's a critical core of the 3DS. Be sur
 ◘ For Sleep.LZ which is located in the root folder of romFS just rename it to sleep_LZ.bin.bin (including the extention)
 this will let you open this with TheCyberQuakes Sleepeditor to add a bit of colour after words just rename the file back to sleep.LZ
 
-◘ Text is generally located in romfs/messaage/ & romfs/message_HUD so edit there as well if you wish and to do this you just need to drag one of these files onto the MSBT editor in the folder provided.
+◘ Text is generally located in romfs/message/ & romfs/message_HUD so edit there as well if you wish and to do this you just need to drag one of these files onto the MSBT editor in the folder provided.
 
 ◘ When all your edits are done just finish up with my Home Menu tool (either the full process or just finish the steps like compressing LZ and rebuild cia
 
