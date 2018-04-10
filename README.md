@@ -1,5 +1,5 @@
 # WARNING: 
-This will affect your HomeMenu, it's a critical core of the 3DS. Be sure to have a HardMod/NTRBoot, or A9LH/Boot9Strap NAND backup ready to recover a **BRICK** (I used it once, I got a brick the second time I did it. A9LH saved me **(TO AVOID BRICKING PLEASE KEEP YOUR BACK UP FROM JUST BEFORE THE EDIT AND IF YOU WANT TO RE INJECT AN EDITED HOME MENU THEN YOU MUST RESTORE THAT NAND THEN YOU CAN EDIT AGAIN OR ELSE YOU BRICK INSTANTLY))** . Or your can do it on your EmuNand, but be sure to also backup your EmuNand before.
+This will affect your HomeMenu, it's a critical core of the 3DS. Be sure to have a HardMod/NTRBoot, or A9LH/Boot9Strap NAND backup ready to recover a possible **BRICK**. A9LH saved me **(TO AVOID BRICKING PLEASE KEEP YOUR BACK UP FROM JUST BEFORE THE EDIT)**. Or your can do it on your EmuNand, but be sure to also backup your EmuNand before.
 
 ◘ Download: My master zip folder which comes with everything you need.
 
@@ -10,7 +10,7 @@ This will affect your HomeMenu, it's a critical core of the 3DS. Be sure to have
 ◘ Place your SD back into your 3ds, and boot into godmode9
 
 ◘ Once godemode9 boots, press the home button, go to scripts, and run Mod_HomeMenu
-  
+
 ◘ When prompted, select "Grab CIA"
 
 ◘ Godmode9 will work it's magic, and create HomeMenu.cia in gm9/out on your SD
@@ -22,14 +22,20 @@ This will affect your HomeMenu, it's a critical core of the 3DS. Be sure to have
 ◘ Now simply run my Home Menu Tool i provided from within that folder and it will list you all steps. For convenience i added an option to do all at once so extract rebuild and decompress all the LZ files at once. and auto place the file when done everything back into your SD card.
 
 ◘ Now you do your edits.
+For sleep.LZ colour edits (the power off screen) you can simply use the SleepLZColorEditor Tool found within the MenuDump pack.
+You can set your own colours, or use either one of the two provided example colour theme files or another colour theme file you find online
 
-◘ Text is generally located in romfs/message/ & romfs/message_HUD so edit there as well if you wish and to do this you just need to drag one of these files onto the MSBT editor in the folder provided.
+For text edits, You can use MSBT Editor, which is also included in the MenuDump pack.
+The file you'll want to open is menu_msbt.LZ, found in the ExtractedRomFS/message/(your language) folder.
+for the sleep menu (the power off screen we color edit above) You'll want to edit the lau_press_pow* strings
 
-◘ When all your edits are done just finish up with my Home Menu tool (either the full process or just finish the steps like compressing LZ and rebuild cia
 
-◘ My tool will auto rename the cia to HomeMenu_edited.cia for convenience and even place it into your gm9/out/ folder on your SD
 
-◘  Copy your edited cia back onto your SD card in the gm9/out folder unless it was placed there by the tool, and place your SD back into the 3ds
+◘ Go back to your home menu tool prompt that is still running, and press any key to continue
+
+◘ The files will get recompressed, and rebuilt back into a CIA, and then automatically copied to your 3ds SD card if it's still in the computer
+
+◘ If it doesn't automatically copy, then manually copy the HomeMenu_edited.cia into the gm9/out folder on your SD card
 
 ◘ Boot into Godmode9. Press the home button, then select scripts, and run Mod_HomeMenu
 
@@ -43,8 +49,7 @@ If your console doesn't boot, then don't worry! TheCyberQuakes script is designe
 
 Boot into godmode9, press home button, select scripts, and run Mod_HomeMenu. Select Restore when prompted
 
-That's it! Now your home menu should be back to it's original version (or whatever version it was when you first ran the install_homemenu script).
-You can also use this step to remove your edits at any point if you want to.
+That's it! Now your home menu should be back to it's original version (or whatever version it was when you first ran the install_homemenu script). You can also use this step to remove your edits at any point if you want to.
 
 
 ♥♥♥ Many thanks to the GBATemp community, Asia81, & TheCyberQuake and a few more honourable mentions for the programs to have made this possible. ♥♥♥
