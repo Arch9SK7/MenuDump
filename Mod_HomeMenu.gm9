@@ -1,0 +1,113 @@
+# Author: TheCyberQuake
+# Mod_HomeMenu
+# Collection of tools for dumping, installing, and restoring Home Menu from godmode9
+set PREVIEW_MODE quick
+
+if chk $[REGION] "USA"
+  set MENUPATH 1:/title/00040030/00008f02/content
+  set TITLEID 0004003000008F02
+elif chk $[REGION] "JPN"
+  set MENUPATH 1:/title/00040030/00008202/content
+  set TITLEID 0004003000008202
+elif chk $[REGION] "EUR"
+  set MENUPATH 1:/title/00040030/00009802/content
+  set TITLEID 0004003000009802
+elif chk $[REGION] "CHN"
+  set MENUPATH 1:/title/00040030/0000a102/content
+  set TITLEID 000400300000a102
+elif chk $[REGION] "KOR"
+  set MENUPATH 1:/title/00040030/0000a902/content
+  set TITLEID 000400300000a902
+elif chk $[REGION] "TWN"
+  set MENUPATH 1:/title/00040030/0000b102/content
+  set TITLEID 000400300000b102
+else
+  echo "Console region can not be determined! Aborting!"
+  goto end
+end
+
+@selwork
+labelsel "What would you like to do with Home Menu?" lswork_*
+
+
+#########################-Grab_CIA-#############################
+@lswork_Grab_CIA
+# Find the .tmd for Home Menu, set variable TMD to that location
+find $[MENUPATH]/*.tmd TMD
+
+# Build CIA from the Home Menu .tmd
+buildcia $[TMD]
+
+# Find the created CIA
+find $[GM9OUT]/$[TITLEID]*.cia CIA
+
+# Rename CIA to HomeMenu.cia
+mv $[CIA] $[GM9OUT]/HomeMenu.cia
+goto end
+################################################################
+
+
+
+
+#########################-Install-##############################
+@lswork_Install
+# Have user select their edited home menu cia
+filesel -d "Select your modified Home Menu CIA" 0:/gm9/out/*.cia CIA
+
+# Encrypt CIA - NECESSARY TO NOT BRICK
+encrypt $[CIA]
+
+# Mount the CIA to virtual drive
+imgmount $[CIA]
+
+# Find the .app within the mounted CIA
+find G:/*.app EDITAPP
+
+# Find the .app we are replacing
+find $[MENUPATH]/*.app ORIGAPP
+
+# Backup original .app, just in case
+cp -k $[ORIGAPP] $[GM9OUT]/originalhomemenu.app
+cp -k $[ORIGAPP] 1:/rw/originalhomemenu.app
+
+# Ask user if they want to make a sysNAND backup, and do so if desired
+if ask "Create a sysNAND backup first?"
+goto sysDump
+else
+goto replace
+end
+
+@sysDump
+findnot $[GM9OUT]/$[DATESTAMP]_$[SERIAL]_sysnand_???.bin OUTPATH
+cp -h S:/nand_minsize.bin $[OUTPATH]
+
+@replace
+# Replace home menu .app with edited .app
+cp -w -n $[EDITAPP] $[ORIGAPP]
+goto end
+################################################################
+
+
+
+
+#########################-RESTORE-##############################
+@lswork_Restore
+# Check if previously created home menu .app backup exists
+if not find $[GM9OUT]/originalhomemenu.app ORIGAPP
+  if not find 1:/rw/originalhomemenu.app ORIGAPP
+    echo "originalhomemenu.app not found!\nCan't restore Home Menu!\nDid you remove or delete this file?"
+    goto selwork
+  end
+end
+
+# If we ge to here, the file exists and we can restore it
+
+# find location of home menu .app to replace
+find $[MENUPATH]/*.app NEWAPP
+
+# Restore originalhomemenu.app to the correct location
+cp -w -n $[ORIGAPP] $[NEWAPP]
+goto end
+################################################################
+
+@end
