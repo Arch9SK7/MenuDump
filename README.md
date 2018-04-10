@@ -2,48 +2,51 @@ WARNING: This will affect your HomeMenu, it's a critical core of the 3DS. Be sur
 
 ◘ Download:My master zip folder which comes with everything you need.
 
-◘ Download, with 3DNUS (In the master) the CIA of your HomeMenu (Latest Version):
-*Just enter the currently available OFW by nintendo followed by the region
+◘ Make sure you have the latest GodMode9 Installed https://github.com/d0k3/GodMode9/releases
 
-Eg; 11.6.0-39U 
-	11.6.0-39E 
-	11.6.0-39J 
-JPN: 0004003000008202 (Homemenu CIA title)
+◘ Copy Mod_HomeMenu.gm9 from the zip onto your 3ds SD card in the gm9/scripts folder
 
-USA: 0004003000008F02 (Homemenu CIA title)
+◘ Place your SD back into your 3ds, and boot into godmode9
 
-EUR: 0004003000009802 (Homemenu CIA title)
+◘ Once godemode9 boots, press the home button, go to scripts, and run Mod_HomeMenu
+  
+◘ When prompted, select "Grab CIA"
 
-◘ Rename the CIA  to HomeMenu.cia
+◘ Godmode9 will work it's magic, and create HomeMenu.cia in gm9/out on your SD
 
-◘ place it into your SD card either in D9 folder for decrypt9 or wherever else for Godmode9.
+◘ Power off your 3ds, and insert your SD into your computer
 
-◘ Decrypt it using Decrypt9 -> Game Decryptor Options -> CIA Decryptor (Deep)
-OR GodMode9 -> (A) on CIA -> CIA image options... -> Decrypt file (...) -> Decrypt inplace.
+◘ Copy the HomeMenu.cia from your SD card (gm9/out) to the homemenuedition folder you extracted from the zip earlier
 
-◘ Take now the decrypted CIA and put it in the HomeMenuEdition folder (included in master).
+◘ Now simply run my Home Menu Tool i provided from within that folder and it will list you all steps. For convenience i added an option to do all at once so extract rebuild and decompress all the LZ files at once. and auto place the file when done everything back into your SD card.
 
-◘ Run my included tool,it has the options to extract all files from the cia AND decompress all the LZ11 files at once voiding the need for 3ds explorer.
+◘ Now you do your edits.
 
-♥ Most of the files are LZ11 compressed, you should decompress them before editing, then recompress them when finished editing.
+◘ For Sleep.LZ which is located in the root folder of romFS just rename it to sleep_LZ.bin.bin (including the extention)
+this will let you open this with TheCyberQuakes Sleepeditor to add a bit of colour after words just rename the file back to sleep.LZ
 
-♥ Now edit to your desire.
+◘ Text is generally located in romfs/messaage/ & romfs/message_HUD so edit there as well if you wish and to do this you just need to drag one of these files onto the MSBT editor in the folder provided.
 
-(All your edits will be done in the "Edit" window of MSBT Editor Reloaded (text like shutdownscreen or homemenu) or a hex editor (fonts or colours) and to open them in MSBT you just drag the file onto msbt editor in the folder and it should open :) )
+◘ When all your edits are done just finish up with my Home Menu tool (either the full process or just finish the steps like compressing LZ and rebuild cia
 
-♥ in "MSBT Editor Reloaded". Once a file is edited, you need to recompress it. Just use the Compressor / instead Decompressor from
+◘ My tool will auto rename the cia to HomeMenu_edited.cia for convenience and even place it into your gm9/out/ folder on your SD
 
- my home menu tool in the folder "HomeMenuEdition".
+◘  Copy your edited cia back onto your SD card in the gm9/out folder unless it was placed there by the tool, and place your SD back into the 3ds
 
-♥ Use the tool again and choose to rebuild the CIA, All your files should be packed in a new cia.
+◘ Boot into Godmode9. Press the home button, then select scripts, and run Mod_HomeMenu
 
-♥ HomeMenu_Edited.cia (even if you choose the option to place it onto the SD automatically (Which will try to find the folder D9Game on SD)).
-
-♥ Encrypt HomeMenu_Edited.cia using Decrypt9 -> Game Decryptor Options -> CIA Encryptor (NCCH)
-OR Encrypt HomeMenu_Edited.cia using Godmode9 -> (A) on HomeMenu_Edited.cia -> CIA image options... -> Encrypt file (...) -> Encrypt inplace.
-
-♥ Once the CIA is encrypted, then you can install it using your preferred method of cia installation ex. FBI. No need to delete the previous CIA, install it will overwrite the old one.
+◘ When prompted, select "Install", and then select the home menu cia you wish to install. It will ask if you want to create a sysNAND backup first. I recommend doing this the first time you run the script. Once the script completes, you can reboot
 
 ♥ Reboot. Then pray or have A9LH/B9S. Check if you see your edits.
 
-♥♥♥ Many thanks to the GBATemp community, Asia81, and a few more honourable mentions for the programs to have made this possible. ♥♥♥
+◘ xXx If your console successfully boots, then congrats! You now have a custom home menu!
+
+If your console doesn't boot, then don't worry! TheCyberQuakes script is designed to be as safe as possible, and we have a contingency plan for this!
+
+Boot into godmode9, press home button, select scripts, and run Mod_HomeMenu. Select Restore when prompted
+
+That's it! Now your home menu should be back to it's original version (or whatever version it was when you first ran the install_homemenu script).
+You can also use this step to remove your edits at any point if you want to.
+
+
+♥♥♥ Many thanks to the GBATemp community, Asia81, & TheCyberQuake and a few more honourable mentions for the programs to have made this possible. ♥♥♥
